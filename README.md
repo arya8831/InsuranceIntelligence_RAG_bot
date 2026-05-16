@@ -52,9 +52,8 @@ The pipeline processes user queries and policy ingestion through a structured Re
 
 Below is the architectural flow illustrating the parsing, vectorization, indexing, and retrieval mechanics of the RAG system:
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/65e90ea2-bdff-4b8c-b02f-519782800d36" alt="System Architecture Diagram" width="85%" />
-</p>
+<img width="940" height="434" alt="image" src="https://github.com/user-attachments/assets/7ee367d6-31c6-4174-b941-a5366d95fa10" />
+
 
 1. **Preprocessing:** Documents are converted into overlapping 1000-character chunks to maintain semantic integrity across boundaries using `RecursiveCharacterTextSplitter`.
 2. **Indexing:** Chunks transform into vectors using `models/embedding-001` and settle into local FAISS vector spaces or serverless DataStax Astra DB setups.
@@ -69,9 +68,10 @@ Below is the architectural flow illustrating the parsing, vectorization, indexin
 The system offers an intuitive, easy-to-navigate dashboard for policy interaction and continuous conversation management.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3cd93750-6334-4f15-aefd-367120965c5a" alt="Chat UI Baseline" width="48%" />
-  &nbsp;
-  <img src="https://github.com/user-attachments/assets/1567baeb-2d4e-4f16-acb1-4f151528659d" alt="Active Conversation" width="48%" />
+<img width="1056" height="582" alt="image" src="https://github.com/user-attachments/assets/85cb25a2-27ac-4247-8625-8045b5d85a1d" />
+
+<img width="1054" height="575" alt="image" src="https://github.com/user-attachments/assets/70a68363-9cc9-41d0-a360-5a56f5f3a624" />
+
 </p>
 
 ### 🗄️ Database & Connectivity
@@ -79,9 +79,10 @@ The system offers an intuitive, easy-to-navigate dashboard for policy interactio
 Secure cloud vector persistence layer managed remotely via DataStax Astra DB utilizing automated API client integration routines.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f2a38f59-e743-4579-aad5-f95b731174ee" alt="Astra DB Dashboard" width="48%" />
-  &nbsp;
-  <img src="https://github.com/user-attachments/assets/94824707-cda4-44b4-84c6-43b23c28df79" alt="Client Python Connection" width="48%" />
+<img width="1012" height="540" alt="image" src="https://github.com/user-attachments/assets/f7cc889a-34e3-45c5-8b67-7eeeda9ab423" />
+
+<img width="1006" height="574" alt="image" src="https://github.com/user-attachments/assets/f5d1b21d-7568-4863-b0b1-9576dd5eb09f" />
+
 </p>
 
 ### 📂 Document Upload & Processing
@@ -89,9 +90,9 @@ Secure cloud vector persistence layer managed remotely via DataStax Astra DB uti
 Administrators can drop files straight into the workspace pipeline, instantly converting long-form legal contracts into structured vectors.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/969641ea-e8ce-4bc9-930f-b258673a5a87" alt="Upload Portal" width="48%" />
-  &nbsp;
-  <img src="https://github.com/user-attachments/assets/bd2da259-7ff0-48e2-9f37-d2ce0c13ee4c" alt="Processing Pipeline Engine" width="48%" />
+<img width="1016" height="543" alt="image" src="https://github.com/user-attachments/assets/22279912-7b75-48e0-a621-73075b3db210" />
+
+<img width="1016" height="607" alt="image" src="https://github.com/user-attachments/assets/33656e6a-d8cf-4e97-b1a5-ec1e10927ad8" />
 </p>
 
 ---
