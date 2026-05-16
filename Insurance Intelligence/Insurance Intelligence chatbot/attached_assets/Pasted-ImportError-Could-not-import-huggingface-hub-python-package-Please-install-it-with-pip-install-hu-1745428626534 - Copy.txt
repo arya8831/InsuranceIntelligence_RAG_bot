@@ -1,0 +1,29 @@
+ImportError: Could not import huggingface_hub python package. Please install it with `pip install huggingface_hub`.
+Traceback:
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 640, in code_to_exec
+    exec(code, module.__dict__)
+File "/home/runner/workspace/app.py", line 189, in <module>
+    llm = get_llm()
+          ^^^^^^^^^
+File "/home/runner/workspace/utils/llm_utils.py", line 18, in get_llm
+    llm = HuggingFaceEndpoint(
+          ^^^^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/langchain_core/_api/deprecation.py", line 224, in warn_if_direct_instance
+    return wrapped(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/langchain_core/load/serializable.py", line 130, in __init__
+    super().__init__(*args, **kwargs)
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/pydantic/main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/pydantic/_internal/_decorators_v1.py", line 148, in _wrapper1
+    return validator(values)
+           ^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/langchain_core/utils/pydantic.py", line 226, in wrapper
+    return func(cls, values)
+           ^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/langchain_community/llms/huggingface_endpoint.py", line 176, in validate_environment
+    raise ImportError(
